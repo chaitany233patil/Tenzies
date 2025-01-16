@@ -59,7 +59,7 @@ function App() {
       {isWon && <Confetti />}
       <div className="container">{dieElements}</div>
       <button onClick={isWon ? newGame : rollDice} className="rollDice">
-        {isWon ? "Roll New Game" : "Roll"}
+        {isWon ? "Start New Game" : "Roll"}
       </button>
       <p style={{ marginTop: "10px" }}>
         <i>
