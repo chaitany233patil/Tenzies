@@ -37,7 +37,7 @@ The game is deployed and accessible online:
 5. Open your browser and navigate to `http://localhost:5173` to play the game locally.
 
 ## Screenshots
-![Tenzies Game](./public/screenshot.png)
+![Tenzies Game](./screenshot.png)
 
 ## Contributing
 If you'd like to contribute to the project, feel free to open an issue or submit a pull request. Contributions are welcome!
