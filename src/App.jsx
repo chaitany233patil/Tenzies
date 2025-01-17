@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 import Confetti from "react-confetti";
 
 function App() {
-  const [dice, setDice] = useState(getAllDiceNumber());
+  const [dice, setDice] = useState(() => getAllDiceNumber());
 
   const isWon = dice.every(
     (diceObj) =>
@@ -13,6 +13,7 @@ function App() {
   );
 
   function getAllDiceNumber() {
+    console.log("Hello");
     return new Array(10).fill(0).map(() => ({
       value: Math.ceil(Math.random() * 6),
       isHeld: false,
@@ -38,15 +39,15 @@ function App() {
   ));
 
   function rollDice() {
-    setDice((prevDice) =>
-      prevDice.map((dice) =>
-        dice.isHeld ? dice : { ...dice, value: Math.ceil(Math.random() * 6) }
-      )
-    );
-  }
-
-  function newGame() {
-    setDice(getAllDiceNumber());
+    if (!isWon) {
+      setDice((prevDice) =>
+        prevDice.map((dice) =>
+          dice.isHeld ? dice : { ...dice, value: Math.ceil(Math.random() * 6) }
+        )
+      );
+    } else {
+      setDice(getAllDiceNumber());
+    }
   }
 
   return (
@@ -58,7 +59,7 @@ function App() {
       </div>
       {isWon && <Confetti />}
       <div className="container">{dieElements}</div>
-      <button onClick={isWon ? newGame : rollDice} className="rollDice">
+      <button onClick={rollDice} className="rollDice">
         {isWon ? "Start New Game" : "Roll"}
       </button>
       <p style={{ marginTop: "10px" }}>
