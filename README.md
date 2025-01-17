@@ -20,7 +20,7 @@ The game is deployed and accessible online:
 ## How to Run Locally
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/chaitany233patil/Tenzies/tree/main
    ```
 2. **Navigate to the project directory**
    ```bash
@@ -37,13 +37,7 @@ The game is deployed and accessible online:
 5. Open your browser and navigate to `http://localhost:5173` to play the game locally.
 
 ## Screenshots
-![Tenzies Game](./path-to-screenshot.png)
-
-## Contributing
-If you'd like to contribute to the project, feel free to open an issue or submit a pull request. Contributions are welcome!
-
-## License
-This project is licensed under the MIT License. Feel free to use and modify the code as needed.
+![Tenzies Game](./public/Screenshot.png)
 
 ---
 Developed with ❤️ by [Chaitanya Patil](https://github.com/your-profile).
